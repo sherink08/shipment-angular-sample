@@ -1,0 +1,5 @@
+form {
+    >div:not(:first-child) {
+        padding-top: 30px;
+    }
+}

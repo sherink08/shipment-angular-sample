@@ -1,0 +1,4 @@
+<div>
+  <p-message severity="success" [text]="status" *ngIf="status=='Approved'"></p-message>
+  <p-message severity="error" [text]="status" *ngIf="status=='Denied'"></p-message>
+</div>

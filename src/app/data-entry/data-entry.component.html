@@ -1,0 +1,33 @@
+<form [formGroup]="dataFormGroup">
+  <div>
+    <p-dropdown [options]="data" optionLabel="label" placeholder="Select a shipment" formControlName="capacity">
+      <ng-template let-shipment pTemplate="item">
+        <div class="shipment-item">
+          <div>{{ shipment.label }}</div>
+        </div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+
+  <div>
+    <span class="p-float-label">
+      <input id="float-input" type="text" formControlName="length" pInputText [ngClass]="{'ng-invalid ng-dirty': lErr}">
+      <label for="float-input">Length</label>
+    </span>
+  </div>
+
+  <div>
+    <span class="p-float-label">
+      <input id="float-input" type="text" formControlName="width" pInputText [ngClass]="{'ng-invalid ng-dirty': wErr}">
+      <label for="float-input">Width</label>
+    </span>
+  </div>
+
+  <div>
+    <span class="p-float-label">
+      <input id="float-input" type="text" formControlName="height" pInputText [ngClass]="{'ng-invalid ng-dirty': hErr}">
+      <label for="float-input">Height</label>
+    </span>
+  </div>
+
+</form>
